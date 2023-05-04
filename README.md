@@ -1,7 +1,6 @@
 # Suger Java Library
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.fern-api/suger)](https://central.sonatype.dev/artifact/io.github.fern-api/suger/0.0.7/versions) 
-![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/io.github.fern-api/suger?server=https%3A%2F%2Fs01.oss.sonatype.org)
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-SDK%20generated%20by%20Fern-brightgreen)](https://github.com/fern-api/fern)
 
 The Suger Java library provides access to the Suger API from Java.
