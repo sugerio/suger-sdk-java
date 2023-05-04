@@ -26,6 +26,7 @@ public final class OperationClientImpl implements OperationClient {
   @Override
   public List<SharedOperation> listOperations(String orgId, ListOperationsRequest request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("operation")
       ;if (request.getOfferId().isPresent()) {

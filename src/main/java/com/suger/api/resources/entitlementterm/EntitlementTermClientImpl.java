@@ -25,6 +25,7 @@ public final class EntitlementTermClientImpl implements EntitlementTermClient {
   public List<SharedWorkloadEntitlementTerm> listEntitlementTerms(String orgId,
       String entitlementId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement/")
       .addPathSegment(entitlementId)
@@ -51,6 +52,7 @@ public final class EntitlementTermClientImpl implements EntitlementTermClient {
   public SharedWorkloadEntitlementTerm getEntitlementTerm(String orgId, String entitlementId,
       String entitlementTermId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement/")
       .addPathSegment(entitlementId)

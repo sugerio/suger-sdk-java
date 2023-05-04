@@ -38,6 +38,7 @@ public final class MeteringClientImpl implements MeteringClient {
   public SharedListUsageRecordGroupsResponse listUsageRecordGroupsByEntitlement(String orgId,
       String entitlementId, ListUsageRecordGroupsByEntitlementRequest request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement/")
       .addPathSegment(entitlementId)
@@ -79,6 +80,7 @@ public final class MeteringClientImpl implements MeteringClient {
     public SharedMeteringUsageRecordGroup reportUsageRecordGroup(String orgId, String entitlementId,
         SharedCreateUsageRecordGroupParams request) {
       HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("entitlement/")
         .addPathSegment(entitlementId)
@@ -120,6 +122,7 @@ public final class MeteringClientImpl implements MeteringClient {
       public SharedListUsageRecordReportsResponse listUsageRecordReportsByEntitlement(String orgId,
           String entitlementId, ListUsageRecordReportsByEntitlementRequest request) {
         HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("entitlement/")
           .addPathSegment(entitlementId)
@@ -164,6 +167,7 @@ public final class MeteringClientImpl implements MeteringClient {
         public SharedListUsageRecordGroupsResponse listUsageRecordGroupsByProduct(String orgId,
             String productId, ListUsageRecordGroupsByProductRequest request) {
           HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+            .addPathSegment("/org/")
             .addPathSegment(orgId)
             .addPathSegments("product/")
             .addPathSegment(productId)
@@ -205,6 +209,7 @@ public final class MeteringClientImpl implements MeteringClient {
           public SharedListUsageRecordReportsResponse listUsageRecordReportsByProduct(String orgId,
               String productId, ListUsageRecordReportsByProductRequest request) {
             HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+              .addPathSegment("/org/")
               .addPathSegment(orgId)
               .addPathSegments("product/")
               .addPathSegment(productId)
@@ -246,6 +251,7 @@ public final class MeteringClientImpl implements MeteringClient {
             public SharedListUsageRecordGroupsResponse listUsageRecordGroupsByOrganization(
                 String orgId, ListUsageRecordGroupsByOrganizationRequest request) {
               HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+                .addPathSegment("/org/")
                 .addPathSegment(orgId)
                 .addPathSegments("usageRecordGroup")
                 ;if (request.getStartDate().isPresent()) {
@@ -285,6 +291,7 @@ public final class MeteringClientImpl implements MeteringClient {
               public SharedMeteringUsageRecordGroup getUsageRecordGroup(String orgId,
                   String usageRecordGroupId) {
                 HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+                  .addPathSegment("/org/")
                   .addPathSegment(orgId)
                   .addPathSegments("usageRecordGroup/")
                   .addPathSegment(usageRecordGroupId)
@@ -310,6 +317,7 @@ public final class MeteringClientImpl implements MeteringClient {
               public SharedListUsageRecordReportsResponse listUsageRecordReportsByOrganization(
                   String orgId, ListUsageRecordReportsByOrganizationRequest request) {
                 HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+                  .addPathSegment("/org/")
                   .addPathSegment(orgId)
                   .addPathSegments("usageRecordReport")
                   ;if (request.getStartDate().isPresent()) {
@@ -349,6 +357,7 @@ public final class MeteringClientImpl implements MeteringClient {
                 public SharedMeteringUsageRecordReport getUsageRecordReport(String orgId,
                     String usageRecordReportId) {
                   HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+                    .addPathSegment("/org/")
                     .addPathSegment(orgId)
                     .addPathSegments("usageRecordReport/")
                     .addPathSegment(usageRecordReportId)

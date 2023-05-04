@@ -33,6 +33,7 @@ public final class ProductClientImpl implements ProductClient {
   public List<SharedWorkloadProduct> listProductsByPartner(String orgId,
       ListProductsByPartnerRequestPartner partner) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("partner/")
       .addPathSegment(partner.toString())
@@ -58,6 +59,7 @@ public final class ProductClientImpl implements ProductClient {
   @Override
   public List<SharedWorkloadProduct> listProductsByOrganization(String orgId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("product")
       .build();Request _request = new Request.Builder()
@@ -81,6 +83,7 @@ public final class ProductClientImpl implements ProductClient {
   @Override
   public SharedWorkloadProduct getProduct(String orgId, String productId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("product/")
       .addPathSegment(productId)
@@ -106,6 +109,7 @@ public final class ProductClientImpl implements ProductClient {
   public SharedWorkloadProduct updateProduct(String orgId, String productId,
       SharedUpdateProductParams request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("product/")
       .addPathSegment(productId)
@@ -143,6 +147,7 @@ public final class ProductClientImpl implements ProductClient {
     @Override
     public String deleteProduct(String orgId, String productId) {
       HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("product/")
         .addPathSegment(productId)
@@ -168,6 +173,7 @@ public final class ProductClientImpl implements ProductClient {
     public List<SharedAwsSaasProductDimension> listProductMeteringDimensions(String orgId,
         String productId) {
       HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("product/")
         .addPathSegment(productId)

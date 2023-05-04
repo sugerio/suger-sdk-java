@@ -39,6 +39,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
   @Override
   public List<SharedIdentityIntegration> listIntegrationsByOrganization(String orgId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("integration")
       .build();Request _request = new Request.Builder()
@@ -63,6 +64,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
   public SharedIdentityIntegration createIntegration(String orgId,
       SharedCreateIntegrationParams request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("integration")
       ;HttpUrl _httpUrl = _httpUrlBuilder.build()
@@ -102,6 +104,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
     public SharedIdentityIntegration getIntegration(String orgId,
         GetIntegrationRequestPartner partner, GetIntegrationRequestService service) {
       HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("integration/")
         .addPathSegment(partner.toString())
@@ -129,6 +132,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
         UpdateIntegrationRequestPartner partner, UpdateIntegrationRequestService service,
         SharedUpdateIntegrationParams request) {
       HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("integration/")
         .addPathSegment(partner.toString())
@@ -169,6 +173,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
       public String deleteIntegration(String orgId, DeleteIntegrationRequestPartner partner,
           DeleteIntegrationRequestService service) {
         HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("integration/")
           .addPathSegment(partner.toString())
@@ -195,6 +200,7 @@ public final class IntegrationClientImpl implements IntegrationClient {
       public boolean verifyIntegration(String orgId, VerifyIntegrationRequestPartner partner,
           VerifyIntegrationRequestService service) {
         HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("integration/")
           .addPathSegment(partner.toString())

@@ -37,6 +37,7 @@ public final class ReportClientImpl implements ReportClient {
   public SharedListRevenueRecordsResponse listRevenueRecords(String orgId,
       ListRevenueRecordsRequestPartner partner, ListRevenueRecordsRequest request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("partner/")
       .addPathSegment(partner.toString())
@@ -87,6 +88,7 @@ public final class ReportClientImpl implements ReportClient {
     public SharedListRevenueRecordDetailsResponse listRevenueRecordDetails(String orgId,
         ListRevenueRecordDetailsRequestPartner partner, ListRevenueRecordDetailsRequest request) {
       HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("partner/")
         .addPathSegment(partner.toString())
@@ -137,6 +139,7 @@ public final class ReportClientImpl implements ReportClient {
       public SharedRevenueReport getRevenueReport(String orgId,
           SharedGetRevenueReportParams request) {
         HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("revenueReport")
           ;HttpUrl _httpUrl = _httpUrlBuilder.build()
@@ -177,6 +180,7 @@ public final class ReportClientImpl implements ReportClient {
         @Override
         public SharedUsageReport getUsageReport(String orgId, SharedGetUsageReportParams request) {
           HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+            .addPathSegment("/org/")
             .addPathSegment(orgId)
             .addPathSegments("usageReport")
             ;HttpUrl _httpUrl = _httpUrlBuilder.build()

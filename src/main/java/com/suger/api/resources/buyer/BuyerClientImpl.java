@@ -30,6 +30,7 @@ public final class BuyerClientImpl implements BuyerClient {
   @Override
   public List<SharedIdentityBuyer> listBuyersByOrganization(String orgId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("buyer")
       .build();Request _request = new Request.Builder()
@@ -53,6 +54,7 @@ public final class BuyerClientImpl implements BuyerClient {
   @Override
   public SharedIdentityBuyer getBuyer(String orgId, String buyerId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("buyer/")
       .addPathSegment(buyerId)
@@ -78,6 +80,7 @@ public final class BuyerClientImpl implements BuyerClient {
   public SharedIdentityBuyer updateBuyerNameDescription(String orgId, String buyerId,
       GithubComSugerioMarketplaceServiceRdsDbLibUpdateBuyerNameDescriptionParams request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("buyer/")
       .addPathSegment(buyerId)

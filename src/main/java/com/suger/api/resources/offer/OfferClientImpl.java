@@ -27,6 +27,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public SharedWorkloadOffer createOrUpdateDraftOffer(String orgId, SharedWorkloadOffer request) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("draftOffer")
       .build();
@@ -58,6 +59,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public List<SharedWorkloadOffer> listOffersByOrganization(String orgId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("offer")
       .build();Request _request = new Request.Builder()
@@ -81,6 +83,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public SharedWorkloadOffer createOffer(String orgId, SharedWorkloadOffer request) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("offer")
       .build();
@@ -112,6 +115,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public SharedWorkloadOffer getOffer(String orgId, String offerId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("offer/")
       .addPathSegment(offerId)
@@ -136,6 +140,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public String deleteOffer(String orgId, String offerId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("offer/")
       .addPathSegment(offerId)
@@ -160,6 +165,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public String cancelOffer(String orgId, String offerId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("offer/")
       .addPathSegment(offerId)
@@ -186,6 +192,7 @@ public final class OfferClientImpl implements OfferClient {
   public List<SharedWorkloadOffer> listOffersByPartner(String orgId,
       ListOffersByPartnerRequestPartner partner) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("partner/")
       .addPathSegment(partner.toString())
@@ -211,6 +218,7 @@ public final class OfferClientImpl implements OfferClient {
   @Override
   public List<SharedWorkloadOffer> listOffersByProduct(String orgId, String productId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("product/")
       .addPathSegment(productId)

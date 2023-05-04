@@ -33,6 +33,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
   @Override
   public List<SharedWorkloadEntitlement> listEntitlementsByBuyer(String orgId, String buyerId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("buyer/")
       .addPathSegment(buyerId)
@@ -58,6 +59,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
   @Override
   public List<SharedWorkloadEntitlement> listEntitlements(String orgId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement")
       .build();Request _request = new Request.Builder()
@@ -81,6 +83,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
   @Override
   public SharedWorkloadEntitlement getEntitlement(String orgId, String entitlementId) {
     HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement/")
       .addPathSegment(entitlementId)
@@ -106,6 +109,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
   public SharedAddEntitlementCreditResponse addEntitlementCredit(String orgId, String entitlementId,
       SharedAddEntitlementCreditParams request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/org/")
       .addPathSegment(orgId)
       .addPathSegments("entitlement/")
       .addPathSegment(entitlementId)
@@ -145,6 +149,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
     public SharedWorkloadEntitlement updateEntitlementName(String orgId, String entitlementId,
         GithubComSugerioMarketplaceServiceRdsDbLibUpdateEntitlementNameParams request) {
       HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+        .addPathSegment("/org/")
         .addPathSegment(orgId)
         .addPathSegments("entitlement/")
         .addPathSegment(entitlementId)
@@ -183,6 +188,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
       @Override
       public List<SharedWorkloadEntitlement> listEntitlementsByOffer(String orgId, String offerId) {
         HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("offer/")
           .addPathSegment(offerId)
@@ -209,6 +215,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
       public List<SharedWorkloadEntitlement> listEntitlementsByPartner(String orgId,
           ListEntitlementsByPartnerRequestPartner partner) {
         HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("partner/")
           .addPathSegment(partner.toString())
@@ -235,6 +242,7 @@ public final class EntitlementClientImpl implements EntitlementClient {
       public List<SharedWorkloadEntitlement> listEntitlementsByProduct(String orgId,
           String productId) {
         HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+          .addPathSegment("/org/")
           .addPathSegment(orgId)
           .addPathSegments("product/")
           .addPathSegment(productId)

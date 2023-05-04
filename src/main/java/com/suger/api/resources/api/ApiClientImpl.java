@@ -29,6 +29,7 @@ public final class ApiClientImpl implements ApiClient {
   public SharedApiClientAccessToken getApiClientAccessToken(
       SharedGetApiClientAccessTokenParams request) {
     HttpUrl.Builder _httpUrlBuilder = HttpUrl.parse(this.clientOptions.environment().getUrl()).newBuilder()
+      .addPathSegment("/public/apiClient/accessToken")
       ;HttpUrl _httpUrl = _httpUrlBuilder.build()
           ;
       Map<String, Object> _requestBodyProperties = new HashMap<>();
