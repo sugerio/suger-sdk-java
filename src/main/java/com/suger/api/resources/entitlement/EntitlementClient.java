@@ -2,9 +2,9 @@ package com.suger.api.resources.entitlement;
 
 import com.suger.api.resources.entitlement.requests.GithubComSugerioMarketplaceServiceRdsDbLibUpdateEntitlementNameParams;
 import com.suger.api.resources.entitlement.requests.SharedAddEntitlementCreditParams;
-import com.suger.api.resources.types.ListEntitlementsByPartnerRequestPartner;
-import com.suger.api.resources.types.SharedAddEntitlementCreditResponse;
-import com.suger.api.resources.types.SharedWorkloadEntitlement;
+import com.suger.api.types.ListEntitlementsByPartnerRequestPartner;
+import com.suger.api.types.SharedAddEntitlementCreditResponse;
+import com.suger.api.types.SharedWorkloadEntitlement;
 import java.lang.String;
 import java.util.List;
 

@@ -3,7 +3,7 @@ package com.suger.api.resources.api;
 import com.suger.api.core.ClientOptions;
 import com.suger.api.core.ObjectMappers;
 import com.suger.api.resources.api.requests.SharedGetApiClientAccessTokenParams;
-import com.suger.api.resources.types.SharedApiClientAccessToken;
+import com.suger.api.types.SharedApiClientAccessToken;
 import java.lang.Exception;
 import java.lang.Object;
 import java.lang.Override;

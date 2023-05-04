@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.suger.api.core.ClientOptions;
 import com.suger.api.core.ObjectMappers;
 import com.suger.api.resources.buyer.requests.GithubComSugerioMarketplaceServiceRdsDbLibUpdateBuyerNameDescriptionParams;
-import com.suger.api.resources.types.SharedIdentityBuyer;
+import com.suger.api.types.SharedIdentityBuyer;
 import java.lang.Exception;
 import java.lang.Object;
 import java.lang.Override;

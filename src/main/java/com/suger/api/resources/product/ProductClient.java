@@ -1,9 +1,9 @@
 package com.suger.api.resources.product;
 
 import com.suger.api.resources.product.requests.SharedUpdateProductParams;
-import com.suger.api.resources.types.ListProductsByPartnerRequestPartner;
-import com.suger.api.resources.types.SharedAwsSaasProductDimension;
-import com.suger.api.resources.types.SharedWorkloadProduct;
+import com.suger.api.types.ListProductsByPartnerRequestPartner;
+import com.suger.api.types.SharedAwsSaasProductDimension;
+import com.suger.api.types.SharedWorkloadProduct;
 import java.lang.String;
 import java.util.List;
 

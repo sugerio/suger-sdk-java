@@ -1,7 +1,7 @@
 package com.suger.api.resources.buyer;
 
 import com.suger.api.resources.buyer.requests.GithubComSugerioMarketplaceServiceRdsDbLibUpdateBuyerNameDescriptionParams;
-import com.suger.api.resources.types.SharedIdentityBuyer;
+import com.suger.api.types.SharedIdentityBuyer;
 import java.lang.String;
 import java.util.List;
 

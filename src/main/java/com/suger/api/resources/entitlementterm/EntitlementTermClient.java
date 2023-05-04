@@ -1,6 +1,6 @@
 package com.suger.api.resources.entitlementterm;
 
-import com.suger.api.resources.types.SharedWorkloadEntitlementTerm;
+import com.suger.api.types.SharedWorkloadEntitlementTerm;
 import java.lang.String;
 import java.util.List;
 

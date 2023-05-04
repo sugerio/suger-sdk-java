@@ -2,15 +2,15 @@ package com.suger.api.resources.integration;
 
 import com.suger.api.resources.integration.requests.SharedCreateIntegrationParams;
 import com.suger.api.resources.integration.requests.SharedUpdateIntegrationParams;
-import com.suger.api.resources.types.DeleteIntegrationRequestPartner;
-import com.suger.api.resources.types.DeleteIntegrationRequestService;
-import com.suger.api.resources.types.GetIntegrationRequestPartner;
-import com.suger.api.resources.types.GetIntegrationRequestService;
-import com.suger.api.resources.types.SharedIdentityIntegration;
-import com.suger.api.resources.types.UpdateIntegrationRequestPartner;
-import com.suger.api.resources.types.UpdateIntegrationRequestService;
-import com.suger.api.resources.types.VerifyIntegrationRequestPartner;
-import com.suger.api.resources.types.VerifyIntegrationRequestService;
+import com.suger.api.types.DeleteIntegrationRequestPartner;
+import com.suger.api.types.DeleteIntegrationRequestService;
+import com.suger.api.types.GetIntegrationRequestPartner;
+import com.suger.api.types.GetIntegrationRequestService;
+import com.suger.api.types.SharedIdentityIntegration;
+import com.suger.api.types.UpdateIntegrationRequestPartner;
+import com.suger.api.types.UpdateIntegrationRequestService;
+import com.suger.api.types.VerifyIntegrationRequestPartner;
+import com.suger.api.types.VerifyIntegrationRequestService;
 import java.lang.String;
 import java.util.List;
 

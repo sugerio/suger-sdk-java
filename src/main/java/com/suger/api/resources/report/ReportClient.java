@@ -4,12 +4,12 @@ import com.suger.api.resources.report.requests.ListRevenueRecordDetailsRequest;
 import com.suger.api.resources.report.requests.ListRevenueRecordsRequest;
 import com.suger.api.resources.report.requests.SharedGetRevenueReportParams;
 import com.suger.api.resources.report.requests.SharedGetUsageReportParams;
-import com.suger.api.resources.types.ListRevenueRecordDetailsRequestPartner;
-import com.suger.api.resources.types.ListRevenueRecordsRequestPartner;
-import com.suger.api.resources.types.SharedListRevenueRecordDetailsResponse;
-import com.suger.api.resources.types.SharedListRevenueRecordsResponse;
-import com.suger.api.resources.types.SharedRevenueReport;
-import com.suger.api.resources.types.SharedUsageReport;
+import com.suger.api.types.ListRevenueRecordDetailsRequestPartner;
+import com.suger.api.types.ListRevenueRecordsRequestPartner;
+import com.suger.api.types.SharedListRevenueRecordDetailsResponse;
+import com.suger.api.types.SharedListRevenueRecordsResponse;
+import com.suger.api.types.SharedRevenueReport;
+import com.suger.api.types.SharedUsageReport;
 import java.lang.String;
 
 public interface ReportClient {

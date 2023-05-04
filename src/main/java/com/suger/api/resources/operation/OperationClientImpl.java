@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.suger.api.core.ClientOptions;
 import com.suger.api.core.ObjectMappers;
 import com.suger.api.resources.operation.requests.ListOperationsRequest;
-import com.suger.api.resources.types.SharedOperation;
+import com.suger.api.types.SharedOperation;
 import java.lang.Exception;
 import java.lang.Override;
 import java.lang.RuntimeException;

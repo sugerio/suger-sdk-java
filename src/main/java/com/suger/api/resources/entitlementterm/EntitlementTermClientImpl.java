@@ -3,7 +3,7 @@ package com.suger.api.resources.entitlementterm;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.suger.api.core.ClientOptions;
 import com.suger.api.core.ObjectMappers;
-import com.suger.api.resources.types.SharedWorkloadEntitlementTerm;
+import com.suger.api.types.SharedWorkloadEntitlementTerm;
 import java.lang.Exception;
 import java.lang.Override;
 import java.lang.RuntimeException;

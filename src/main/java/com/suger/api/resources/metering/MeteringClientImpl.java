@@ -9,10 +9,10 @@ import com.suger.api.resources.metering.requests.ListUsageRecordReportsByEntitle
 import com.suger.api.resources.metering.requests.ListUsageRecordReportsByOrganizationRequest;
 import com.suger.api.resources.metering.requests.ListUsageRecordReportsByProductRequest;
 import com.suger.api.resources.metering.requests.SharedCreateUsageRecordGroupParams;
-import com.suger.api.resources.types.SharedListUsageRecordGroupsResponse;
-import com.suger.api.resources.types.SharedListUsageRecordReportsResponse;
-import com.suger.api.resources.types.SharedMeteringUsageRecordGroup;
-import com.suger.api.resources.types.SharedMeteringUsageRecordReport;
+import com.suger.api.types.SharedListUsageRecordGroupsResponse;
+import com.suger.api.types.SharedListUsageRecordReportsResponse;
+import com.suger.api.types.SharedMeteringUsageRecordGroup;
+import com.suger.api.types.SharedMeteringUsageRecordReport;
 import java.lang.Exception;
 import java.lang.Object;
 import java.lang.Override;

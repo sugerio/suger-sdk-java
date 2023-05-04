@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.suger.api.resources.types.SharedMeteringUsageRecordGroupMetaInfo;
+import com.suger.api.types.SharedMeteringUsageRecordGroupMetaInfo;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;

@@ -1,7 +1,7 @@
 package com.suger.api.resources.offer;
 
-import com.suger.api.resources.types.ListOffersByPartnerRequestPartner;
-import com.suger.api.resources.types.SharedWorkloadOffer;
+import com.suger.api.types.ListOffersByPartnerRequestPartner;
+import com.suger.api.types.SharedWorkloadOffer;
 import java.lang.String;
 import java.util.List;
 

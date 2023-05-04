@@ -1,7 +1,7 @@
 package com.suger.api.resources.operation;
 
 import com.suger.api.resources.operation.requests.ListOperationsRequest;
-import com.suger.api.resources.types.SharedOperation;
+import com.suger.api.types.SharedOperation;
 import java.lang.String;
 import java.util.List;
 
