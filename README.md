@@ -10,13 +10,44 @@ The Suger Java library provides access to the Suger API from Java.
 
 API documentation is available [here](https://apidoc.suger.io/).
 
+## Install
+
+### Gradle
+
+Add the dependency in your `build.gradle`:
+
+```groovy
+dependencies {
+    implementation 'io.github.fern-api/suger:0.x.x'
+}
+```
+
+### Maven
+
+Add the dependency in your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.fern-api</groupId>
+    <artifactId>suger</artifactId>
+    <version>0.x.x</version>
+</dependency>
+```
+
 ## Usage
 
 Check out the [sample app](.sample-app/app.java) which consumes this SDK!
 
 ```java
-// start with env variables
-TODO
+SugerApiClient suger = SugerApiClient.builder()
+    .apiKey(System.getenv("SUGER_API_KEY"))
+    .build();
+
+SharedWorkloadEntitlement entitlement =
+    suger.entitlement().getEntitlement("orgId", "entitlementId");
+
+System.out.println("Entitlement has buyer id "
+    + entitlement.getBuyerId());
 ```
 
 ## Beta status
