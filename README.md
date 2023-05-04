@@ -36,7 +36,7 @@ Add the dependency in your `pom.xml`:
 
 ## Usage
 
-Check out the [sample app](.sample-app/app.java) which consumes this SDK!
+Check out the [sample app](sample-app/src/main/java/sample/App.java) which consumes this SDK!
 
 ```java
 SugerApiClient suger = SugerApiClient.builder()
