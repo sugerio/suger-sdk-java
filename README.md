@@ -18,7 +18,7 @@ Add the dependency in your `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'io.github.fern-api/suger:0.x.x'
+    implementation 'io.github.fern-api:suger:0.x.x'
 }
 ```
 
