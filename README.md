@@ -46,8 +46,7 @@ SugerApiClient suger = SugerApiClient.builder()
 SharedWorkloadEntitlement entitlement =
     suger.entitlement().getEntitlement("orgId", "entitlementId");
 
-System.out.println("Entitlement has buyer id "
-    + entitlement.getBuyerId());
+System.out.println("Entitlement has buyer id " + entitlement.getBuyerId());
 ```
 
 ## Beta status
