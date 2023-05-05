@@ -5,9 +5,9 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedGcpMarketplaceUserAccountState {
-  ACCOUNT_STATE_UNSPECIFIED("ACCOUNT_STATE_UNSPECIFIED"),
+  UNSPECIFIED("ACCOUNT_STATE_UNSPECIFIED"),
 
-  ACCOUNT_ACTIVE("ACCOUNT_ACTIVE");
+  ACTIVE("ACCOUNT_ACTIVE");
 
   private final String value;
 

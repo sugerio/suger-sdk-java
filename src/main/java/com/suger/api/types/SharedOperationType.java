@@ -5,7 +5,7 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedOperationType {
-  TEMPORAL_WORKFLOW("TemporalWorkflow");
+  OPERATION_TYPE_TEMPORAL_WORKFLOW("TemporalWorkflow");
 
   private final String value;
 

@@ -5,6 +5,8 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedNotificationEventStatus {
+  UNKNOWN(""),
+
   SCHEDULED("SCHEDULED"),
 
   PENDING("PENDING"),

@@ -5,7 +5,7 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedValueType {
-  VALUE_TYPE_UNSPECIFIED("VALUE_TYPE_UNSPECIFIED"),
+  UNSPECIFIED("VALUE_TYPE_UNSPECIFIED"),
 
   BOOL("BOOL"),
 

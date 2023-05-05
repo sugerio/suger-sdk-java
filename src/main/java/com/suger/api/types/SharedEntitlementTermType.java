@@ -5,6 +5,8 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedEntitlementTermType {
+  UNKNOWN(""),
+
   AUTO_RENEW("AutoRenew"),
 
   MANUAL_RENEW("ManualRenew"),

@@ -5,6 +5,8 @@ import java.lang.Override;
 import java.lang.String;
 
 public enum SharedEulaType {
+  UNKNOWN(""),
+
   SCMP("SCMP"),
 
   ECMP("ECMP"),
