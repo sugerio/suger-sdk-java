@@ -2,6 +2,7 @@ package com.suger.api;
 
 import com.suger.api.core.ClientOptions;
 import com.suger.api.core.Environment;
+import com.suger.api.utils.TokenSupplier;
 import java.lang.String;
 
 public final class SugerApiClientBuilder {
@@ -9,8 +10,17 @@ public final class SugerApiClientBuilder {
 
   private Environment environment = Environment.DEFAULT;
 
-  public SugerApiClientBuilder apiKey(String apiKey) {
-    this.clientOptionsBuilder.addHeader("Authorization", apiKey);
+  private String clientId = null;
+
+  private String clientSecret = null;
+
+  public SugerApiClientBuilder clientId(String clientId) {
+    this.clientId = clientId;
+    return this;
+  }
+
+  public SugerApiClientBuilder clientSecret(String clientSecret) {
+    this.clientSecret = clientSecret;
     return this;
   }
 
@@ -26,6 +36,7 @@ public final class SugerApiClientBuilder {
 
   public SugerApiClient build() {
     clientOptionsBuilder.environment(this.environment);
+    clientOptionsBuilder.addHeader("Authorization", new TokenSupplier(clientId, clientSecret));
     return new SugerApiClientImpl(clientOptionsBuilder.build());
   }
 }
