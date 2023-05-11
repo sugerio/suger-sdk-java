@@ -1,7 +1,6 @@
 package com.suger.api;
 
 import com.suger.api.core.ClientOptions;
-import com.suger.api.core.Environment;
 import com.suger.api.core.Suppliers;
 import com.suger.api.resources.api.ApiClient;
 import com.suger.api.resources.api.ApiClientImpl;
@@ -24,7 +23,6 @@ import com.suger.api.resources.product.ProductClientImpl;
 import com.suger.api.resources.report.ReportClient;
 import com.suger.api.resources.report.ReportClientImpl;
 import java.lang.Override;
-import java.lang.String;
 import java.util.function.Supplier;
 
 public final class SugerApiClientImpl implements SugerApiClient {
@@ -112,35 +110,5 @@ public final class SugerApiClientImpl implements SugerApiClient {
   @Override
   public ApiClient api() {
     return this.apiClient.get();
-  }
-
-  public static final class Builder implements SugerApiClient.Builder {
-    ClientOptions.Builder clientOptionsBuilder = ClientOptions.builder();
-
-    Environment environment = Environment.DEFAULT;
-
-    @Override
-    public SugerApiClient.Builder apiKey(String apiKey) {
-      this.clientOptionsBuilder.addHeader("Authorization", apiKey);
-      return this;
-    }
-
-    @Override
-    public SugerApiClient.Builder environment(Environment environment) {
-      this.environment = environment;
-      return this;
-    }
-
-    @Override
-    public SugerApiClient.Builder url(String url) {
-      this.environment = Environment.custom(url);
-      return this;
-    }
-
-    @Override
-    public SugerApiClient build() {
-      clientOptionsBuilder.environment(this.environment);
-      return new SugerApiClientImpl(clientOptionsBuilder.build());
-    }
   }
 }
