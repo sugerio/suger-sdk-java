@@ -8,7 +8,8 @@ public final class App {
 
     public static void main(String[] args) {
         SugerApiClient suger = SugerApiClient.builder()
-                .apiKey(System.getenv("SUGER_API_KEY"))
+                .clientId(System.getenv("SUGER_CLIENT_ID"))
+                .clientSecret(System.getenv("SUGER_CLIENT_SECRET"))
                 .build();
 
         SharedWorkloadEntitlement entitlement =

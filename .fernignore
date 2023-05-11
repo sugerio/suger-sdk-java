@@ -2,3 +2,6 @@
 
 README.md
 sample-app/src/main/java/sample/App.java
+
+src/main/java/com/suger/api/SugerApiClientBuilder
+src/main/java/com/suger/api/utils
