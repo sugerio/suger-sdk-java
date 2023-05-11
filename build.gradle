@@ -33,7 +33,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'io.github.fern-api'
             artifactId = 'suger'
-            version = '0.0.16'
+            version = '0.0.17'
             from components.java
         }
     }

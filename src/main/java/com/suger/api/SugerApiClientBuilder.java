@@ -5,9 +5,9 @@ import com.suger.api.core.Environment;
 import java.lang.String;
 
 public final class SugerApiClientBuilder {
-  ClientOptions.Builder clientOptionsBuilder = ClientOptions.builder();
+  private ClientOptions.Builder clientOptionsBuilder = ClientOptions.builder();
 
-  Environment environment = Environment.DEFAULT;
+  private Environment environment = Environment.DEFAULT;
 
   public SugerApiClientBuilder apiKey(String apiKey) {
     this.clientOptionsBuilder.addHeader("Authorization", apiKey);
